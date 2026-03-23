@@ -3,160 +3,372 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Folly Beach Washout Live</title>
+    <title>Washout Surf Cam | Folly Beach, SC</title>
     <meta
       name="description"
-      content="Watch Folly Beach at The Washout live in South Carolina with premier sponsorship from Bradham Wilder at ERA Wilder Realty and Five Palms Media."
+      content="Watch Folly Beach at The Washout live with sponsor placement from Bradham Wilder at ERA Wilder Realty and Five Palms Media."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="hero">
-        <nav class="topbar">
-          <div class="eyebrow">South Carolina Coastal Cam</div>
-          <a class="status-pill" href="#live-stream">Live Now</a>
-        </nav>
+    <nav class="site-nav">
+      <a class="nav-brand" href="#top">
+        <span class="nav-brand-icon">🌊</span>
+        <span class="nav-brand-name">Washout Surf Cam</span>
+      </a>
+      <a class="nav-live" href="#surfcam">
+        <span class="nav-dot"></span>
+        <span>Live at Folly Beach</span>
+      </a>
+    </nav>
 
-        <div class="hero-grid">
-          <section class="hero-copy">
-            <p class="kicker">Folly Beach, South Carolina</p>
-            <h1>Folly Beach Washout Live Stream</h1>
-            <p class="lead">
-              A simple, sponsor-ready destination to watch the surf, weather,
-              tides, and daily coastal conditions from one of the Lowcountry's
-              most iconic views.
-            </p>
+    <header class="hero" id="top">
+      <p class="hero-eyebrow">Folly Beach, South Carolina · The Washout</p>
+      <h1 class="hero-title">
+        Surf. Watch.<br />
+        <em>Live Folly.</em>
+      </h1>
+      <p class="hero-sub">
+        A local-first surf cam homepage built for daily check-ins, sponsor
+        visibility, and beach traffic headed straight toward The Washout.
+      </p>
+      <div class="hero-pills">
+        <span class="pill pill-teal">Live Surf Cam</span>
+        <span class="pill pill-coral">Premier Sponsors</span>
+        <span class="pill pill-gold">Ad-Ready Landing Page</span>
+      </div>
+      <div class="hero-wave"></div>
+    </header>
 
-            <div class="hero-actions">
-              <a class="button button-primary" href="#live-stream">Watch Live</a>
-              <a class="button button-secondary" href="#sponsors">Meet Sponsors</a>
+    <div class="tab-bar-wrap">
+      <div class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-tab="surfcam">Surf Cam</button>
+        <button class="tab-btn" data-tab="sponsors">Sponsors</button>
+        <button class="tab-btn" data-tab="visit">Visit Folly</button>
+        <button class="tab-btn" data-tab="advertise">Advertise</button>
+      </div>
+    </div>
+
+    <main class="tab-panels">
+      <section class="tab-panel active" data-panel="surfcam" id="surfcam">
+        <section class="stream-section">
+          <div class="stream-card">
+            <div class="stream-chrome">
+              <div class="chrome-dots">
+                <span class="chrome-dot dot-red"></span>
+                <span class="chrome-dot dot-yellow"></span>
+                <span class="chrome-dot dot-green"></span>
+              </div>
+              <div class="chrome-label">washoutsurfcam.com/live</div>
+              <div class="chrome-live">
+                <span class="nav-dot"></span>
+                <span>Streaming</span>
+              </div>
             </div>
 
-            <ul class="signal-list" aria-label="Highlights">
-              <li>Oceanfront live cam presentation</li>
-              <li>Built for local promotion and ad traffic</li>
-              <li>Easy to swap in your official stream feed</li>
-            </ul>
-          </section>
-
-          <aside class="hero-card">
-            <div class="live-badge">Live Coastal View</div>
-            <p class="card-label">Featured Location</p>
-            <h2>The Washout at Folly Beach</h2>
-            <p>
-              Keep this page running as the public-facing home for the beach cam,
-              local forecast tie-ins, and sponsored visibility.
-            </p>
-            <div class="card-metrics">
-              <div>
-                <span>Use Case</span>
-                <strong>Tourism + Real Estate + Media</strong>
-              </div>
-              <div>
-                <span>Primary Goal</span>
-                <strong>Watch, Share, Advertise</strong>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </header>
-
-      <main>
-        <section class="stream-section" id="live-stream">
-          <div class="section-heading">
-            <p class="section-tag">Live Stream</p>
-            <h2>Ready for your live camera embed</h2>
-            <p>
-              Replace the placeholder video link with your YouTube Live, Vimeo,
-              or direct livestream embed URL and this page is ready to promote.
-            </p>
-          </div>
-
-          <div class="stream-layout">
-            <div class="stream-frame">
+            <div class="stream-viewport">
               <iframe
                 id="streamEmbed"
-                title="Folly Beach Washout livestream"
+                title="Washout Surf Cam livestream"
                 src="https://www.youtube.com/embed/jfKfPfyJRdk?si=7FfP0r8vQ7IB5rYV"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
-            </div>
-
-            <div class="stream-panel">
-              <div class="stream-panel-card">
-                <p class="panel-title">Launch Checklist</p>
-                <ul>
-                  <li>Add the real camera embed URL in <code>script.js</code></li>
-                  <li>Swap sponsor links to your live websites</li>
-                  <li>Deploy to any static host and start advertising</li>
-                </ul>
-              </div>
-
-              <div class="stream-panel-card accent">
-                <p class="panel-title">Advertising Angle</p>
-                <p>
-                  Promote this page as the local daily check-in for beach
-                  conditions, surf visibility, and community sponsor presence.
-                </p>
+              <div class="stream-overlay">
+                <div class="stream-badge">The Washout · Folly Beach, SC</div>
               </div>
             </div>
           </div>
+          <p class="stream-caption">
+            Replace the placeholder embed in <code>script.js</code> with your
+            real stream URL when the camera feed is ready.
+          </p>
         </section>
 
-        <section class="sponsors-section" id="sponsors">
-          <div class="section-heading">
-            <p class="section-tag">Premier Sponsors</p>
-            <h2>Presented by trusted coastal brands</h2>
+        <div class="section-break">Palm + Salt + Swell</div>
+
+        <section class="conditions-section">
+          <div class="section-header">
+            <div class="section-eyebrow">Today at a Glance</div>
+            <h2 class="section-title">
+              Quick surf-cam context for repeat visitors
+            </h2>
           </div>
 
-          <div class="sponsor-grid">
-            <article class="sponsor-card">
-              <p class="sponsor-role">Premier Sponsor</p>
-              <h3>Bradham Wilder</h3>
-              <p class="sponsor-subtitle">ERA Wilder Realty</p>
-              <p>
-                Spotlighting a local real estate presence with high-visibility
-                branding on a page people can revisit every day.
+          <div class="conditions-grid">
+            <article class="condition-card highlight-teal">
+              <span class="condition-icon">🏄</span>
+              <p class="condition-label">Primary Break</p>
+              <h3>The Washout</h3>
+              <p class="condition-copy">
+                Designed for surf checks, beach interest, and sponsor traffic
+                centered on Folly Beach’s best-known wave zone.
               </p>
-              <a href="#" data-sponsor-link="era">Add ERA Wilder Realty Link</a>
             </article>
 
-            <article class="sponsor-card sponsor-card-alt">
-              <p class="sponsor-role">Premier Sponsor</p>
-              <h3>Five Palms Media</h3>
-              <p class="sponsor-subtitle">Folly Beach, SC - The Washout</p>
-              <p>
-                A media-forward sponsor placement that fits beach culture,
-                tourism, surf updates, and local audience attention.
+            <article class="condition-card">
+              <span class="condition-icon">📍</span>
+              <p class="condition-label">Viewer Intent</p>
+              <h3>Locals + Visitors</h3>
+              <p class="condition-copy">
+                People landing here are likely checking conditions, planning a
+                beach visit, or scouting the island before they head out.
               </p>
-              <a href="#" data-sponsor-link="five-palms">Add Five Palms Media Link</a>
+            </article>
+
+            <article class="condition-card highlight-coral">
+              <span class="condition-icon">📣</span>
+              <p class="condition-label">Best Use</p>
+              <h3>Ads That Fit</h3>
+              <p class="condition-copy">
+                Real estate, local media, beach rentals, surf brands, food, and
+                events all make sense on a page like this.
+              </p>
+            </article>
+
+            <article class="condition-card">
+              <span class="condition-icon">📱</span>
+              <p class="condition-label">Mobile Ready</p>
+              <h3>Built for Quick Checks</h3>
+              <p class="condition-copy">
+                The layout keeps the live stream front and center on phones,
+                tablets, and desktop traffic from ads or social links.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="sponsors" id="sponsors">
+        <section class="sponsors-section">
+          <div class="section-header">
+            <div class="section-eyebrow">Premier Sponsors</div>
+            <h2 class="section-title">
+              Backed by coastal brands with local reach
+              <span>Positioned for daily views and repeat exposure.</span>
+            </h2>
+          </div>
+
+          <div class="sponsors-grid">
+            <article class="sponsor-card card-realty" data-icon="⌂">
+              <div class="sponsor-badge badge-teal">Premier Sponsor</div>
+              <span class="sponsor-icon">🏡</span>
+              <h3 class="sponsor-name">Bradham Wilder</h3>
+              <p class="sponsor-company">ERA Wilder Realty</p>
+              <div class="sponsor-rule"></div>
+              <p class="sponsor-detail">
+                High-visibility sponsor placement for a trusted real estate
+                brand serving clients who care about the coast, lifestyle, and
+                location.
+              </p>
+              <a class="sponsor-link" href="#" data-sponsor-link="era"
+                >Add ERA Wilder Realty Link</a
+              >
+            </article>
+
+            <article class="sponsor-card card-media" data-icon="◈">
+              <div class="sponsor-badge badge-coral">Premier Sponsor</div>
+              <span class="sponsor-icon">🎥</span>
+              <h3 class="sponsor-name">Five Palms Media</h3>
+              <p class="sponsor-company">Folly Beach, SC · The Washout</p>
+              <div class="sponsor-rule"></div>
+              <p class="sponsor-detail">
+                A natural fit for surf content, island storytelling, branded
+                media, event coverage, and growth around a destination cam.
+              </p>
+              <a class="sponsor-link" href="#" data-sponsor-link="five-palms"
+                >Add Five Palms Media Link</a
+              >
+            </article>
+          </div>
+
+          <div class="banner-shell">
+            <div class="banner-track" id="adTrack">
+              <div class="banner-slide">
+                <strong>Premier Exposure</strong>
+                <span>Top-of-page visibility beside the live camera feed.</span>
+              </div>
+              <div class="banner-slide">
+                <strong>Folly Beach Audience</strong>
+                <span>Catch visitors already thinking about surf and travel.</span>
+              </div>
+              <div class="banner-slide">
+                <strong>Simple Call To Action</strong>
+                <span>Direct clicks to listings, bookings, events, or media.</span>
+              </div>
+            </div>
+            <div class="banner-dots">
+              <button class="banner-dot active" data-banner-dot="0" aria-label="Show slide 1"></button>
+              <button class="banner-dot" data-banner-dot="1" aria-label="Show slide 2"></button>
+              <button class="banner-dot" data-banner-dot="2" aria-label="Show slide 3"></button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="visit" id="visit">
+        <section class="visit-section">
+          <div class="section-header">
+            <div class="section-eyebrow">Visit Folly</div>
+            <h2 class="section-title">
+              Build the site around the place, not just the camera
+            </h2>
+          </div>
+
+          <div class="visit-grid">
+            <article class="visit-card">
+              <p class="visit-kicker">Surf Culture</p>
+              <h3>Why The Washout matters</h3>
+              <p>
+                The Washout is one of Folly Beach’s most recognizable surf
+                spots, which gives this site a real reason to be revisited by
+                surfers, visitors, and locals alike.
+              </p>
+            </article>
+
+            <article class="visit-card">
+              <p class="visit-kicker">Traffic Flow</p>
+              <h3>Best for quick planning</h3>
+              <p>
+                Beachgoers often want one fast answer: what does it look like
+                right now? This layout makes the stream the first thing they
+                see, then supports it with local context.
+              </p>
+            </article>
+
+            <article class="visit-card">
+              <p class="visit-kicker">Expansion Ready</p>
+              <h3>Add guides over time</h3>
+              <p>
+                You can later layer in parking tips, surf reports, tide data,
+                sponsor offers, event promos, and featured businesses without
+                redesigning the whole page.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="advertise" id="advertise">
+        <section class="why-section">
+          <div class="section-header">
+            <div class="section-eyebrow">Why It Works</div>
+            <h2 class="section-title">High-intent local traffic with room to grow</h2>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card">
+              <div class="why-icon">🎯</div>
+              <h3>Hyper-local audience</h3>
+              <p>
+                Visitors checking a surf cam are already interested in the
+                destination and likely to act on nearby businesses or services.
+              </p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon">📈</div>
+              <h3>Repeat traffic</h3>
+              <p>
+                Conditions change all day, which makes this the kind of site
+                people check more than once instead of visiting only once.
+              </p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon">📱</div>
+              <h3>Mobile friendly</h3>
+              <p>
+                Perfect for social, search, and ad traffic from people checking
+                the water while already on the move.
+              </p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon">🔄</div>
+              <h3>Sponsor rotation</h3>
+              <p>
+                The page can support rotating banner slots, spotlight cards, or
+                direct sponsor calls to action as traffic grows.
+              </p>
             </article>
           </div>
         </section>
 
-        <section class="promo-strip">
-          <div>
-            <p class="section-tag">Why This Works</p>
-            <h2>A simple website people will actually bookmark</h2>
+        <section class="pricing-section">
+          <div class="section-header">
+            <div class="section-eyebrow">Sponsorship Tiers</div>
+            <h2 class="section-title">Simple packages you can sell</h2>
           </div>
-          <div class="promo-copy">
-            <p>
-              Live beach cameras create repeat traffic. With the right stream
-              source and sponsor links, this page can support ad campaigns,
-              local awareness, and sponsor recognition without feeling cluttered.
+
+          <div class="pricing-grid">
+            <article class="pricing-card featured">
+              <div class="pricing-tier">Premier Sponsor</div>
+              <div class="pricing-price">$299<span>/mo</span></div>
+              <ul class="pricing-features">
+                <li>Top sponsor card placement</li>
+                <li>Featured branding near the stream</li>
+                <li>Direct click-through call to action</li>
+              </ul>
+            </article>
+            <article class="pricing-card">
+              <div class="pricing-tier">Community Partner</div>
+              <div class="pricing-price">$149<span>/mo</span></div>
+              <ul class="pricing-features">
+                <li>Mid-page sponsor presence</li>
+                <li>Business link and short description</li>
+                <li>Great fit for local hospitality brands</li>
+              </ul>
+            </article>
+            <article class="pricing-card">
+              <div class="pricing-tier">Banner Spotlight</div>
+              <div class="pricing-price">$79<span>/mo</span></div>
+              <ul class="pricing-features">
+                <li>Rotating banner visibility</li>
+                <li>Tap-to-visit support</li>
+                <li>Simple low-friction placement</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section">
+          <div class="contact-inner">
+            <h2 class="contact-title">Ready to advertise on the Washout Surf Cam?</h2>
+            <p class="contact-sub">
+              Use this section for sponsor outreach, media inquiries, or launch
+              conversations once the live camera feed is connected.
             </p>
+            <div class="contact-btns">
+              <a class="contact-btn-primary" href="mailto:bradham.wilder@gmail.com"
+                >Email Bradham Wilder</a
+              >
+              <a class="contact-btn-secondary" href="tel:+18033094709"
+                >Call 803-309-4709</a
+              >
+            </div>
           </div>
         </section>
-      </main>
-    </div>
+      </section>
+    </main>
+
+    <section class="mood-strip">
+      <p>
+        Folly Beach moves fast when the surf turns on. This page gives that
+        daily attention a clean home.
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-brand">Washout Surf Cam</div>
+      <div class="footer-sponsors">
+        <strong>Premier Sponsors:</strong> Bradham Wilder at ERA Wilder Realty
+        and Five Palms Media
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
