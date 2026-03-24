@@ -626,215 +626,6 @@ code {
   gap: 18px;
 }
 
-.sponsor-spotlight,
-.sponsor-mini-card,
-.ad-card,
-.partner-tile {
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-md);
-}
-
-.sponsor-spotlight {
-  padding: 22px;
-  border-radius: var(--radius-xl);
-  color: var(--white);
-  background:
-    radial-gradient(circle at top right, rgba(132, 215, 222, 0.24), transparent 34%),
-    linear-gradient(145deg, #072133 0%, #0b2d44 52%, #15628f 100%);
-}
-
-.sponsor-spotlight-top,
-.ad-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.sponsor-spotlight-title {
-  font-size: 1.75rem;
-  line-height: 1.05;
-}
-
-.sponsor-tier,
-.ad-badge,
-.availability-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.sponsor-tier {
-  color: #dff7ff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.sponsor-spotlight-copy {
-  margin-top: 16px;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.75;
-}
-
-.sponsor-spotlight-meta {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin: 18px 0 20px;
-}
-
-.metric-chip {
-  padding: 14px;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.metric-chip-label {
-  display: block;
-  color: rgba(214, 240, 255, 0.72);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.metric-chip strong {
-  display: block;
-  margin-top: 6px;
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
-
-.logo-lockup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 20px;
-  border: 1px solid rgba(17, 58, 87, 0.12);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 249, 255, 0.96));
-}
-
-.logo-lockup img {
-  max-width: calc(100% - 32px);
-  max-height: calc(100% - 24px);
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.logo-lockup span {
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 0.14em;
-  font-size: 1.1rem;
-  color: var(--blue-700);
-}
-
-.logo-lockup-hero {
-  width: 220px;
-  height: 80px;
-  margin-top: 16px;
-}
-
-.logo-lockup-section {
-  width: 160px;
-  height: 56px;
-  margin-top: 18px;
-}
-
-.logo-lockup-compact {
-  width: 140px;
-  height: 48px;
-  margin: 14px 0 0;
-}
-
-.logo-lockup-wall {
-  width: 100%;
-  min-height: 84px;
-}
-
-.logo-lockup-empty {
-  border-style: dashed;
-  background:
-    linear-gradient(180deg, rgba(243, 249, 253, 0.96), rgba(255, 255, 255, 0.98));
-}
-
-.logo-lockup-empty span {
-  font-size: 0.95rem;
-  color: var(--ink-faint);
-}
-
-.sponsor-stack,
-.partner-strip,
-.sponsor-grid {
-  display: grid;
-  gap: 18px;
-}
-
-.sponsor-mini-card,
-.ad-card,
-.partner-tile {
-  border-radius: var(--radius-lg);
-  padding: 22px;
-  background: rgba(255, 255, 255, 0.96);
-}
-
-.sponsor-mini-card-muted,
-.ad-card-warm {
-  background:
-    linear-gradient(180deg, rgba(255, 245, 232, 0.86), rgba(255, 255, 255, 0.98));
-}
-
-.availability-pill,
-.ad-badge {
-  color: var(--blue-700);
-  background: rgba(23, 135, 199, 0.08);
-  border: 1px solid rgba(23, 135, 199, 0.12);
-}
-
-.availability-pill {
-  margin-top: 16px;
-}
-
-.sponsor-grid {
-  grid-template-columns: 1.2fr 1fr 1fr;
-}
-
-.ad-card-featured {
-  background:
-    radial-gradient(circle at top right, rgba(36, 166, 220, 0.12), transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 246, 255, 0.98));
-}
-
-.partner-strip {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.partner-tile {
-  text-align: center;
-}
-
-.partner-name {
-  margin-top: 14px;
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: var(--ink);
-}
-
-.partner-tile-open .partner-name,
-.footer-mini-note {
-  color: var(--ink-soft);
-}
-
 .highlight-card {
   border-radius: var(--radius-lg);
   padding: 22px;
@@ -993,12 +784,6 @@ code {
   font-size: 0.9rem;
 }
 
-.footer-mini-note {
-  max-width: 26ch;
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
 .muted {
   color: var(--ink-faint);
 }
@@ -1019,12 +804,6 @@ code {
 
   .hero-title {
     max-width: 100%;
-  }
-
-  .sponsor-grid,
-  .partner-strip,
-  .sponsor-spotlight-meta {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -1060,17 +839,6 @@ code {
     display: grid;
     justify-items: center;
     text-align: center;
-  }
-
-  .sponsor-spotlight-top,
-  .ad-card-header {
-    flex-direction: column;
-  }
-
-  .logo-lockup-hero,
-  .logo-lockup-section,
-  .logo-lockup-compact {
-    width: 100%;
   }
 
   .footer-row {
