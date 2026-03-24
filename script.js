@@ -2,8 +2,29 @@ const siteConfig = {
   streamEmbedUrl:
     "https://www.youtube.com/embed/jfKfPfyJRdk?si=7FfP0r8vQ7IB5rYV",
   sponsors: {
-    era: "https://bradhamwilder.erawilderrealty.com/",
-    "five-palms": "#",
+    era: {
+      name: "Bradham Wilder",
+      tier: "Hero Placement",
+      body:
+        "ERA Wilder Realty gets premium visibility beside the livestream with room for an exact logo, a short market-focused pitch, and a direct response CTA.",
+      url: "https://bradhamwilder.erawilderrealty.com/",
+      cta: "Explore Listings",
+      // Prefer an SVG or transparent PNG in a local assets/logos folder.
+      logoPath: "",
+      logoAlt: "Bradham Wilder / ERA Wilder Realty logo",
+      fallback: "ERA",
+    },
+    "five-palms": {
+      name: "Five Palms Media",
+      tier: "Media Partner",
+      body:
+        "Five Palms Media can anchor production, editing, and promotion with a clean native card that feels integrated with the stream experience.",
+      url: "#",
+      cta: "Visit Sponsor",
+      logoPath: "",
+      logoAlt: "Five Palms Media logo",
+      fallback: "FPM",
+    },
   },
 };
 
@@ -17,14 +38,57 @@ document.querySelectorAll("[data-page-link]").forEach((link) => {
   link.classList.toggle("active", link.dataset.pageLink === currentPage);
 });
 
-document.querySelectorAll("[data-sponsor-link]").forEach((link) => {
-  const sponsorKey = link.getAttribute("data-sponsor-link");
-  const sponsorUrl = siteConfig.sponsors[sponsorKey];
+Object.entries(siteConfig.sponsors).forEach(([sponsorKey, sponsor]) => {
+  document.querySelectorAll(`[data-sponsor-link="${sponsorKey}"]`).forEach((link) => {
+    if (sponsor.url && sponsor.url !== "#") {
+      link.href = sponsor.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+    } else {
+      link.href = "./advertise.html";
+    }
+  });
 
-  if (sponsorUrl && sponsorUrl !== "#") {
-    link.href = sponsorUrl;
-    link.target = "_blank";
-    link.rel = "noreferrer";
-    link.textContent = "Visit Sponsor";
-  }
+  document.querySelectorAll(`[data-sponsor-cta="${sponsorKey}"]`).forEach((node) => {
+    node.textContent = sponsor.cta;
+  });
+
+  document
+    .querySelectorAll(`[data-sponsor-card="${sponsorKey}"] [data-sponsor-field="name"]`)
+    .forEach((node) => {
+      node.textContent = sponsor.name;
+    });
+
+  document
+    .querySelectorAll(`[data-sponsor-card="${sponsorKey}"] [data-sponsor-field="body"]`)
+    .forEach((node) => {
+      node.textContent = sponsor.body;
+    });
+
+  document
+    .querySelectorAll(`[data-sponsor-card="${sponsorKey}"] [data-sponsor-field="tier"]`)
+    .forEach((node) => {
+      node.textContent = sponsor.tier;
+    });
+
+  document.querySelectorAll(`[data-sponsor-logo="${sponsorKey}"]`).forEach((img) => {
+    const slot = img.closest("[data-sponsor-logo-slot]");
+
+    if (sponsor.logoPath) {
+      img.src = sponsor.logoPath;
+      img.alt = sponsor.logoAlt;
+      img.hidden = false;
+      slot?.classList.add("has-logo");
+    } else {
+      img.hidden = true;
+      slot?.classList.remove("has-logo");
+    }
+  });
+
+  document
+    .querySelectorAll(`[data-sponsor-logo-fallback="${sponsorKey}"]`)
+    .forEach((fallback) => {
+      fallback.textContent = sponsor.fallback;
+      fallback.hidden = Boolean(sponsor.logoPath);
+    });
 });
